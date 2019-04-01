@@ -23,7 +23,6 @@ class App < Sinatra::Base
   get '/say/:word1/:word2/:word3/:word4/:word5' do
     @say = []
     params.each{ |k,word| @say << word }
-    binding.pry
     erb :say
   end
 
